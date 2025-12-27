@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Activity, Instagram, Twitter, Facebook, Github, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -32,13 +33,13 @@ const Footer: React.FC = () => {
             <h4 className="font-black text-white uppercase tracking-widest text-sm mb-8">Links</h4>
             <ul className="space-y-4">
               {[
-                { name: 'About', href: '#about' },
-                { name: 'Features', href: '#features' },
-                { name: 'Benefits', href: '#benefits' },
-                { name: 'Contact', href: '#contact' }
+                { name: 'Home', href: '/' },
+                { name: 'Features', href: '/features' },
+                { name: 'Benefits', href: '/benefits' },
+                { name: 'Contact', href: '/contact' }
               ].map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-slate-500 hover:text-emerald-500 font-bold transition-colors">{link.name}</a>
+                  <Link to={link.href} className="text-slate-500 hover:text-emerald-500 font-bold transition-colors">{link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -48,13 +49,13 @@ const Footer: React.FC = () => {
             <h4 className="font-black text-white uppercase tracking-widest text-sm mb-8">Support</h4>
             <ul className="space-y-4">
               {[
-                { name: 'Pricing', href: '#pricing' },
-                { name: 'Help Center', href: '#contact' },
+                { name: 'Pricing', href: '/pricing' },
+                { name: 'Help Center', href: '/contact' },
                 { name: 'Privacy Policy', href: '#' },
                 { name: 'Terms of Use', href: '#' }
               ].map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-slate-500 hover:text-emerald-500 font-bold transition-colors">{link.name}</a>
+                  <Link to={link.href} className="text-slate-500 hover:text-emerald-500 font-bold transition-colors">{link.name}</Link>
                 </li>
               ))}
             </ul>

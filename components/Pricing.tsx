@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 
 const Pricing: React.FC = () => {
@@ -31,7 +32,7 @@ const Pricing: React.FC = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-slate-950">
+    <section id="pricing" className="pt-32 pb-24 bg-slate-950 min-h-[80vh]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 reveal opacity-0 translate-y-10 transition-all duration-700">
           <h2 className="text-emerald-500 font-black uppercase tracking-[0.3em] text-sm mb-4">Simple Plans</h2>
@@ -57,9 +58,9 @@ const Pricing: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className={`block w-full py-4 rounded-2xl font-black uppercase text-center transition-all ${p.pop ? 'bg-emerald-500 text-slate-950' : 'glass hover:bg-white/10'}`}>
+              <Link to="/contact" className={`block w-full py-4 rounded-2xl font-black uppercase text-center transition-all ${p.pop ? 'bg-emerald-500 text-slate-950' : 'glass hover:bg-white/10'}`}>
                 {p.cta}
-              </a>
+              </Link>
             </div>
           ))}
         </div>

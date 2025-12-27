@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Activity, CheckCircle } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -28,13 +29,13 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <a href="#pricing" className="group px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-full font-black text-lg flex items-center transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-emerald-500/20">
+              <Link to="/pricing" className="group px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-full font-black text-lg flex items-center transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-emerald-500/20">
                 GET STARTED
                 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="#features" className="px-10 py-5 glass text-white rounded-full font-black text-lg hover:bg-white/10 transition-all">
+              </Link>
+              <Link to="/features" className="px-10 py-5 glass text-white rounded-full font-black text-lg hover:bg-white/10 transition-all">
                 EXPLORE APP
-              </a>
+              </Link>
             </div>
 
             <div className="mt-12 pt-8 border-t border-slate-900 flex flex-wrap gap-6">

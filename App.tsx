@@ -1,18 +1,25 @@
 
 import React, { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
+import HealthEssence from './components/HealthEssence';
+import WorkoutScience from './components/WorkoutScience';
+import WalkingWisdom from './components/WalkingWisdom';
+import LongevityPillars from './components/LongevityPillars';
 import Features from './components/Features';
 import Benefits from './components/Benefits';
 import Pricing from './components/Pricing';
-import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-const App: React.FC = () => {
+// Utility to scroll to top on page change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
   useEffect(() => {
-    // Simple intersection observer for fade-in animations
+    window.scrollTo(0, 0);
+    
+    // Refresh intersection observer for the new page content
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,22 +34,38 @@ const App: React.FC = () => {
 
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
+  return null;
+};
 
+const HomePage = () => (
+  <>
+    <Hero />
+    <HealthEssence />
+    <WorkoutScience />
+    <WalkingWisdom />
+    <LongevityPillars />
+  </>
+);
+
+const App: React.FC = () => {
   return (
-    <div className="min-h-screen selection:bg-emerald-500/30">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Features />
-        <Benefits />
-        <WhyChooseUs />
-        <Pricing />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen selection:bg-emerald-500/30 flex flex-col">
+        <ScrollToTop />
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/benefits" element={<Benefits />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 

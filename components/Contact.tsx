@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="pt-32 pb-24 min-h-[80vh]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="glass rounded-[48px] overflow-hidden border">
           <div className="grid lg:grid-cols-2">
