@@ -1,0 +1,7 @@
+{
+  "name": "Longevity Mind",
+  "description": "A premium landing page for Longevity Mind, an all-in-one health and fitness app focusing on long-term wellness through data-driven workouts, nutrition, and body analysis.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
