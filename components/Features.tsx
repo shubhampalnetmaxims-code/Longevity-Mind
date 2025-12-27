@@ -132,7 +132,7 @@ const Features: React.FC = () => {
                 alt="Body Analysis" 
                 className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center bg-slate-950/20">
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center bg-slate-950/40">
                  <Scale className="w-20 h-20 text-emerald-500 mb-6 drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]" />
                  <h5 className="text-3xl font-black text-white uppercase tracking-tighter mb-2">STEPS & REPORTS</h5>
                  <p className="text-slate-200 text-sm font-bold">Visualizing internal health markers</p>
@@ -181,10 +181,10 @@ const Features: React.FC = () => {
           </div>
           <div className="relative z-10">
             <h2 className="text-sm font-black uppercase tracking-[0.4em] mb-6">Total Integration</h2>
-            <h3 className="text-5xl lg:text-7xl font-black mb-8 leading-tight tracking-tighter uppercase">ONE APP. NO LIMITS.</h3>
+            <h3 className="text-5xl lg:text-7xl font-black mb-8 leading-tight tracking-tighter uppercase">ALL IN ONE PLACE.</h3>
             <p className="text-xl lg:text-2xl font-bold mb-12 max-w-3xl mx-auto leading-relaxed">
-              All in one place: Workout, Steps, Nutrition and Report in one app. <br />
-              <span className="opacity-80">Stop switching between multiple interfaces and unify your results.</span>
+              Workout, Steps, Nutrition and Report in one place, one app. <br />
+              <span className="opacity-80 font-bold">Everything you need to manage your health is unified.</span>
             </p>
             <div className="bg-slate-950 text-emerald-500 px-10 py-5 rounded-full inline-block font-black text-xl uppercase tracking-widest shadow-2xl shadow-slate-950/20">
               No need to manage 4 different apps
