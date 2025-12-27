@@ -9,7 +9,7 @@ const WorkoutScience: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 reveal opacity-0 translate-y-10 transition-all duration-700">
           <h2 className="text-blue-500 font-black uppercase tracking-[0.3em] text-sm mb-4">The Training</h2>
-          <h3 className="text-4xl lg:text-6xl font-black text-white uppercase">Consistency > Intensity</h3>
+          <h3 className="text-4xl lg:text-6xl font-black text-white uppercase">Consistency &gt; Intensity</h3>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
